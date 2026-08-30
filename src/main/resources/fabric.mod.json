@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "esprits-mod",
+	"version": "${version}",
+	"name": "Esprits-Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/esprits-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"espritsmod.EspritsMod"
+		],
+		"client": [
+			"espritsmod.client.EspritsModClient"
+		],
+		"fabric-datagen": [
+			"espritsmod.client.EspritsModDataGenerator"
+		]
+	},
+	"mixins": [
+		"esprits-mod.mixins.json",
+		{
+			"config": "esprits-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.3-",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
