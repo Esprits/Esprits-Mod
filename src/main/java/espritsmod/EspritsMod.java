@@ -1,5 +1,6 @@
 package espritsmod;
 
+import espritsmod.world.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -21,7 +22,8 @@ public class EspritsMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		ModItems.initialize();
+		LOGGER.info("Esprits-Mod has been initialised!");
 	}
 
 	public static Identifier id(String path) {
