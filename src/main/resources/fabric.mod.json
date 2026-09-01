@@ -22,7 +22,7 @@
 			"espritsmod.client.EspritsModClient"
 		],
 		"fabric-datagen": [
-			"espritsmod.client.EspritsModDataGenerator"
+			"espritsmod.client.datagen.EspritsModDataGenerator"
 		]
 	},
 	"mixins": [

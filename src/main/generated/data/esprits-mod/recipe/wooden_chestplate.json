@@ -6,10 +6,10 @@
   },
   "pattern": [
     "X X",
-    "X X"
+    "XXX",
+    "XXX"
   ],
   "result": {
-    "id": "esprits-mod:wooden_boots",
-    "count": 1
+    "id": "esprits-mod:wooden_chestplate"
   }
 }

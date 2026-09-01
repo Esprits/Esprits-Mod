@@ -5,11 +5,10 @@
     "X": "esprits-mod:tree_bark"
   },
   "pattern": [
-    "XXX",
+    "X X",
     "X X"
   ],
   "result": {
-    "id": "esprits-mod:wooden_helmet",
-    "count": 1
+    "id": "esprits-mod:wooden_boots"
   }
 }

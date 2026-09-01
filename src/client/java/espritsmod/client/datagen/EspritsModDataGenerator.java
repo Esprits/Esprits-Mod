@@ -1,6 +1,5 @@
-package espritsmod.client;
+package espritsmod.client.datagen;
 
-import espritsmod.client.datagen.EspritsModItemTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -9,6 +8,9 @@ public class EspritsModDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
+		pack.addProvider(EspritsModModelProvider::new);
+		pack.addProvider(EspritsModRecipeProvider::new);
+		pack.addProvider(EspritsModEnglishLangProvider::new);
 		pack.addProvider(EspritsModItemTagProvider::new);
 	}
 }
