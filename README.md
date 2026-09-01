@@ -1,4 +1,4 @@
-# Esprits-Mod
+# Esprits Mod
 
 ## Setup
 
