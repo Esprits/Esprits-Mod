@@ -1,0 +1,10 @@
+{
+  "replace": true,
+  "values": [
+    "esprits-mod:tree_bark",
+    {
+      "id": "#minecraft:planks",
+      "required": false
+    }
+  ]
+}
