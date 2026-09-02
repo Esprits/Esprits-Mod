@@ -23,7 +23,7 @@ public class EspritsMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		ModItems.initialize();
-		LOGGER.info("Esprits-Mod has been initialised!");
+		LOGGER.info("Esprits Mod has been initialised!");
 	}
 
 	public static Identifier id(String path) {

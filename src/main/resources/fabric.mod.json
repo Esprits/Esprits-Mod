@@ -9,7 +9,8 @@
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/esprits-mod",
-		"sources": "https://github.com/Esprits/Esprits-Mod"
+		"sources": "https://github.com/Esprits/Esprits-Mod",
+		"issues": "https://github.com/Esprits/Esprits-Mod/issues"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/esprits_mod/icon.png",
