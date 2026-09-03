@@ -1,5 +1,6 @@
 // 26.2	-999999999-01-01T00:00:00	Esprits Mod/Tags for minecraft:item
 1f1a6fff87abae06c80f3aa91886bb41ac4f03ea data/esprits_mod/tags/item/repairs_wood_armor.json
+e6ba3eca20454a098207eef76f2d94b3693d2301 data/esprits_mod/tags/item/tree_bark.json
 f21908f6b1943a3afa669a060eb4a0fe435c29c5 data/esprits_mod/tags/item/wooden_armor.json
 5110364657096d91fc5df521f6a39956c62e727d data/minecraft/tags/item/chest_armor.json
 63150c7d212d1a9eb926888318502d8e2c07f8e3 data/minecraft/tags/item/foot_armor.json
