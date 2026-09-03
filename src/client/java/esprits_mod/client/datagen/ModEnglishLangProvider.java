@@ -6,8 +6,8 @@ import net.minecraft.core.HolderLookup;
 
 import java.util.concurrent.CompletableFuture;
 
-public class EspritsModEnglishLangProvider extends FabricLanguageProvider {
-    protected EspritsModEnglishLangProvider(FabricPackOutput packOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+public class ModEnglishLangProvider extends FabricLanguageProvider {
+    protected ModEnglishLangProvider(FabricPackOutput packOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(packOutput, "en_us", registryLookup);
     }
 

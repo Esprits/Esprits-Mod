@@ -7,8 +7,8 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
 
-public class EspritsModModelProvider extends FabricModelProvider {
-    public EspritsModModelProvider(FabricPackOutput output) {
+public class ModModelProvider extends FabricModelProvider {
+    public ModModelProvider(FabricPackOutput output) {
         super(output);
     }
 

@@ -12,8 +12,8 @@ import net.minecraft.world.item.Item;
 
 import java.util.concurrent.CompletableFuture;
 
-public class EspritsModRecipeProvider extends FabricRecipeProvider {
-    public EspritsModRecipeProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+public class ModRecipeProvider extends FabricRecipeProvider {
+    public ModRecipeProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 

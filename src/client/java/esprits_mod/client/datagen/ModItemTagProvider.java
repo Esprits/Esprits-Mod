@@ -14,10 +14,10 @@ import net.minecraft.world.item.Item;
 
 import java.util.concurrent.CompletableFuture;
 
-public class EspritsModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
+public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
     public static final TagKey<Item> WOOD_ARMOR = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(EspritsMod.MOD_ID, "wooden_armor"));
 
-    public EspritsModItemTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+    public ModItemTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
