@@ -41,4 +41,4 @@ replay_*.log
 
 # aseprite
 
-src/main/resources/assets/esprits_mod/textures/item/palettes/
+src/main/resources/assets/esprits_mod/textures/palettes/

@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "esprits_mod:wooden"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "esprits_mod:wooden"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "esprits_mod:wooden"
+      }
+    ]
+  }
+}

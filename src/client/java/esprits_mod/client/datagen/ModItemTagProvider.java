@@ -29,6 +29,15 @@ public class EspritsModItemTagProvider extends FabricTagsProvider.ItemTagsProvid
                 .add(ModItemIDs.WOOD_LEGGINGS)
                 .add(ModItemIDs.WOOD_BOOTS);
 
+        builder(ItemTags.HEAD_ARMOR)
+                .add(ModItemIDs.WOOD_HELMET);
+        builder(ItemTags.CHEST_ARMOR)
+                .add(ModItemIDs.WOOD_CHESTPLATE);
+        builder(ItemTags.LEG_ARMOR)
+                .add(ModItemIDs.WOOD_LEGGINGS);
+        builder(ItemTags.FOOT_ARMOR)
+                .add(ModItemIDs.WOOD_BOOTS);
+
         builder(WoodArmorMaterial.REPAIRS_WOOD_ARMOR)
                 .add(ModItemIDs.TREE_BARK)
                 .addOptionalTag(ItemTags.PLANKS);
