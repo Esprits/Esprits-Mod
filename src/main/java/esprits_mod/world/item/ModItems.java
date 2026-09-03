@@ -16,35 +16,34 @@ import net.minecraft.world.item.equipment.ArmorType;
 import java.util.function.Function;
 
 public class ModItems {
-    public static final Item TREE_BARK = register(
-            ModItemIDs.TREE_BARK,
-            Item::new,
-            new Item.Properties());
-    public static final Item WOOD_HELMET = register(
-            ModItemIDs.WOOD_HELMET,
-            Item::new,
-            new Item.Properties().humanoidArmor(WoodArmorMaterial.INSTANCE, ArmorType.HELMET).durability(ArmorType.HELMET.getDurability(WoodArmorMaterial.BASE_DURABILITY)));
-    public static final Item WOOD_CHESTPLATE = register(
-            ModItemIDs.WOOD_CHESTPLATE,
-            Item::new,
-            new Item.Properties().humanoidArmor(WoodArmorMaterial.INSTANCE, ArmorType.CHESTPLATE).durability(ArmorType.CHESTPLATE.getDurability(WoodArmorMaterial.BASE_DURABILITY)));
-    public static final Item WOOD_LEGGINGS = register(
-            ModItemIDs.WOOD_LEGGINGS,
-            Item::new,
-            new Item.Properties().humanoidArmor(WoodArmorMaterial.INSTANCE, ArmorType.LEGGINGS).durability(ArmorType.LEGGINGS.getDurability(WoodArmorMaterial.BASE_DURABILITY)));
-    public static final Item WOOD_BOOTS = register(
-            ModItemIDs.WOOD_BOOTS,
-            Item::new,
-            new Item.Properties().humanoidArmor(WoodArmorMaterial.INSTANCE, ArmorType.BOOTS).durability(ArmorType.BOOTS.getDurability(WoodArmorMaterial.BASE_DURABILITY)));
+    public static final Item TREE_BARK = registerItem(ModItemIDs.TREE_BARK);
+    public static final Item WOOD_HELMET = registerItem(ModItemIDs.WOOD_HELMET, new Item.Properties()
+            .humanoidArmor(WoodArmorMaterial.INSTANCE, ArmorType.HELMET)
+    );
+    public static final Item WOOD_CHESTPLATE = registerItem(ModItemIDs.WOOD_CHESTPLATE, new Item.Properties()
+            .humanoidArmor(WoodArmorMaterial.INSTANCE, ArmorType.CHESTPLATE)
+    );
+    public static final Item WOOD_LEGGINGS = registerItem(ModItemIDs.WOOD_LEGGINGS, new Item.Properties()
+            .humanoidArmor(WoodArmorMaterial.INSTANCE, ArmorType.LEGGINGS)
+    );
+    public static final Item WOOD_BOOTS = registerItem(ModItemIDs.WOOD_BOOTS, new Item.Properties()
+            .humanoidArmor(WoodArmorMaterial.INSTANCE, ArmorType.BOOTS)
+    );
 
-    public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
+    public static Item registerItem(ResourceKey<Item> id) {
+        return registerItem(id, Item::new, new Item.Properties());
+    }
+
+    public static Item registerItem(ResourceKey<Item> id, Item.Properties properties) {
+        return registerItem(id, Item::new, properties);
+    }
+
+    public static Item registerItem(ResourceKey<Item> id, Function<Item.Properties, Item> itemFactory, Item.Properties properties) {
         // Create the item instance
-        Item item = itemFactory.apply(settings.setId(itemKey));
+        Item item = itemFactory.apply(properties.setId(id));
 
-        // Register the item
-        Registry.register(BuiltInRegistries.ITEM, itemKey, item);
-
-        return item;
+        // Register & return the item
+        return Registry.register(BuiltInRegistries.ITEM, id, item);
     }
 
     public static void initialize() {
@@ -57,7 +56,10 @@ public class ModItems {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register((creativeTab) -> creativeTab.insertAfter(ModItems.WOOD_CHESTPLATE, ModItems.WOOD_LEGGINGS));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register((creativeTab) -> creativeTab.insertAfter(ModItems.WOOD_LEGGINGS, ModItems.WOOD_BOOTS));
 
+        // Make the following items compostable
         CompostableRegistry.INSTANCE.add(ModItems.TREE_BARK, 0.3f);
+
+        // Make the following items fuel
         FuelValueEvents.BUILD.register((builder, context) -> {
             builder.add(ModItems.TREE_BARK, 100);
             builder.add(ModItems.WOOD_HELMET, 200);
