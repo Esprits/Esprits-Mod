@@ -17,6 +17,16 @@ import java.util.function.Function;
 
 public class ModItems {
     public static final Item OAK_BARK = registerItem(ModItemIDs.OAK_BARK);
+    public static final Item BIRCH_BARK = registerItem(ModItemIDs.BIRCH_BARK);
+    public static final Item SPRUCE_BARK = registerItem(ModItemIDs.SPRUCE_BARK);
+    public static final Item JUNGLE_BARK = registerItem(ModItemIDs.JUNGLE_BARK);
+    public static final Item ACACIA_BARK = registerItem(ModItemIDs.ACACIA_BARK);
+    public static final Item DARK_OAK_BARK = registerItem(ModItemIDs.DARK_OAK_BARK);
+    public static final Item MANGROVE_BARK = registerItem(ModItemIDs.MANGROVE_BARK);
+    public static final Item CHERRY_BARK = registerItem(ModItemIDs.CHERRY_BARK);
+    public static final Item PALE_OAK_BARK = registerItem(ModItemIDs.PALE_OAK_BARK);
+    public static final Item CRIMSON_BARK = registerItem(ModItemIDs.CRIMSON_BARK);
+    public static final Item WARPED_BARK = registerItem(ModItemIDs.WARPED_BARK);
     public static final Item WOOD_HELMET = registerItem(ModItemIDs.WOOD_HELMET, new Item.Properties()
             .humanoidArmor(WoodArmorMaterial.INSTANCE, ArmorType.HELMET)
     );
@@ -49,8 +59,17 @@ public class ModItems {
     public static void initialize() {
         // Get the event for modifying entries in the ingredients group
         // and register an event handler that adds oak bark to the ingredients group
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.accept(ModItems.OAK_BARK));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.insertAfter(Items.STICK, ModItems.OAK_BARK));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.insertAfter(ModItems.OAK_BARK, ModItems.BIRCH_BARK));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.insertAfter(ModItems.BIRCH_BARK, ModItems.SPRUCE_BARK));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.insertAfter(ModItems.SPRUCE_BARK, ModItems.JUNGLE_BARK));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.insertAfter(ModItems.JUNGLE_BARK, ModItems.ACACIA_BARK));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.insertAfter(ModItems.ACACIA_BARK, ModItems.DARK_OAK_BARK));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.insertAfter(ModItems.DARK_OAK_BARK, ModItems.MANGROVE_BARK));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.insertAfter(ModItems.MANGROVE_BARK, ModItems.CHERRY_BARK));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.insertAfter(ModItems.CHERRY_BARK, ModItems.PALE_OAK_BARK));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.insertAfter(ModItems.PALE_OAK_BARK, ModItems.CRIMSON_BARK));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> creativeTab.insertAfter(ModItems.CRIMSON_BARK, ModItems.WARPED_BARK));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register((creativeTab) -> creativeTab.insertBefore(Items.LEATHER_HELMET, ModItems.WOOD_HELMET));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register((creativeTab) -> creativeTab.insertAfter(ModItems.WOOD_HELMET, ModItems.WOOD_CHESTPLATE));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register((creativeTab) -> creativeTab.insertAfter(ModItems.WOOD_CHESTPLATE, ModItems.WOOD_LEGGINGS));
