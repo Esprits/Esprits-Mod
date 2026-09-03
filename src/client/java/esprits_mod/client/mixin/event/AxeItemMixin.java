@@ -34,7 +34,7 @@ public class AxeItemMixin {
         Level level = context.getLevel();
         BlockPos pos = context.getClickedPos();
         Direction face = context.getClickedFace();
-        ItemStack itemStack = new ItemStack(ModItems.TREE_BARK, UniformInt.of(1, 2).sample(level.getRandom()));
+        ItemStack itemStack = new ItemStack(ModItems.OAK_BARK, UniformInt.of(1, 2).sample(level.getRandom()));
 
         Block.popResourceFromFace(level, pos, face, itemStack);
     }

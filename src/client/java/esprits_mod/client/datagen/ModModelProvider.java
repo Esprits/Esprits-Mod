@@ -19,7 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
-        itemModelGenerators.generateFlatItem(ModItems.TREE_BARK, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.OAK_BARK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.WOOD_HELMET, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.WOOD_CHESTPLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.WOOD_LEGGINGS, ModelTemplates.FLAT_ITEM);

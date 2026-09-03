@@ -1,27 +1,27 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_oak_bark": {
+      "conditions": {
+        "items": [
+          {
+            "items": "esprits_mod:oak_bark"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "esprits_mod:wooden_chestplate"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_tree_bark": {
-      "conditions": {
-        "items": [
-          {
-            "items": "esprits_mod:tree_bark"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_tree_bark"
+      "has_oak_bark"
     ]
   ],
   "rewards": {

@@ -39,11 +39,11 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItemIDs.WOOD_BOOTS);
 
         builder(WoodArmorMaterial.REPAIRS_WOOD_ARMOR)
-                .add(ModItemIDs.TREE_BARK)
+                .add(ModItemIDs.OAK_BARK)
                 .addOptionalTag(ItemTags.PLANKS);
 
         builder(ItemTags.WOODEN_TOOL_MATERIALS)
-                .add(ModItemIDs.TREE_BARK)
+                .add(ModItemIDs.OAK_BARK)
                 .addOptionalTag(ItemTags.PLANKS)
                 .setReplace(true);
     }

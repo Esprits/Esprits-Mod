@@ -13,7 +13,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
-        translationBuilder.add("item.esprits_mod.tree_bark", "Tree Bark");
+        translationBuilder.add("item.esprits_mod.oak_bark", "Oak Bark");
 
         translationBuilder.add("item.esprits_mod.wooden_helmet", "Wooden Helmet");
         translationBuilder.add("item.esprits_mod.wooden_chestplate", "Wooden Chestplate");

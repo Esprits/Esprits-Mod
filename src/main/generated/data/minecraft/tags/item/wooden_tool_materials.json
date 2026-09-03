@@ -1,7 +1,7 @@
 {
   "replace": true,
   "values": [
-    "esprits_mod:tree_bark",
+    "esprits_mod:oak_bark",
     {
       "id": "#minecraft:planks",
       "required": false

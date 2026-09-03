@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "esprits_mod:item/tree_bark"
+    "layer0": "esprits_mod:item/oak_bark"
   }
 }

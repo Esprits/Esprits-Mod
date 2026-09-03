@@ -7,7 +7,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 
 public class ModItemIDs {
-    public static final ResourceKey<Item> TREE_BARK = create("tree_bark");
+    public static final ResourceKey<Item> OAK_BARK = create("oak_bark");
     public static final ResourceKey<Item> WOOD_HELMET = create("wooden_helmet");
     public static final ResourceKey<Item> WOOD_CHESTPLATE = create("wooden_chestplate");
     public static final ResourceKey<Item> WOOD_LEGGINGS = create("wooden_leggings");
