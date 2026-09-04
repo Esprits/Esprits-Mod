@@ -1,15 +1,20 @@
 package esprits_mod.client.mixin.event;
 
+import esprits_mod.EspritsMod;
 import esprits_mod.world.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.references.BlockIds;
+import net.minecraft.references.BlockItemIds;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -34,7 +39,38 @@ public class AxeItemMixin {
         Level level = context.getLevel();
         BlockPos pos = context.getClickedPos();
         Direction face = context.getClickedFace();
-        ItemStack itemStack = new ItemStack(ModItems.OAK_BARK, UniformInt.of(1, 2).sample(level.getRandom()));
+
+        Block block = level.getBlockState(pos).getBlock();
+        Item item;
+
+        // Check which log is broken and set the item to drop as its counterpart bark
+        if (block.equals(Blocks.OAK_LOG)) {
+            item = ModItems.OAK_BARK;
+        } else if (block.equals(Blocks.BIRCH_LOG)) {
+            item = ModItems.BIRCH_BARK;
+        } else if (block.equals(Blocks.SPRUCE_LOG)) {
+            item = ModItems.SPRUCE_BARK;
+        } else if (block.equals(Blocks.JUNGLE_LOG)) {
+            item = ModItems.JUNGLE_BARK;
+        } else if (block.equals(Blocks.ACACIA_LOG)) {
+            item = ModItems.ACACIA_BARK;
+        } else if (block.equals(Blocks.DARK_OAK_LOG)) {
+            item = ModItems.DARK_OAK_BARK;
+        } else if (block.equals(Blocks.MANGROVE_LOG)) {
+            item = ModItems.MANGROVE_BARK;
+        } else if (block.equals(Blocks.CHERRY_LOG)) {
+            item = ModItems.CHERRY_BARK;
+        } else if (block.equals(Blocks.PALE_OAK_LOG)) {
+            item = ModItems.PALE_OAK_BARK;
+        } else if (block.equals(Blocks.CRIMSON_STEM)) {
+            item = ModItems.CRIMSON_BARK;
+        } else if (block.equals(Blocks.WARPED_STEM)) {
+            item = ModItems.WARPED_BARK;
+        } else {
+            item = ModItems.OAK_BARK;
+        }
+
+        ItemStack itemStack = new ItemStack(item, UniformInt.of(1, 2).sample(level.getRandom()));
 
         Block.popResourceFromFace(level, pos, face, itemStack);
     }
