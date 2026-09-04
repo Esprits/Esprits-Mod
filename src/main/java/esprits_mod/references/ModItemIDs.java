@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 
 public class ModItemIDs {
+    // ### TREE BARK START ###
     public static final ResourceKey<Item> OAK_BARK = create("oak_bark");
     public static final ResourceKey<Item> BIRCH_BARK = create("birch_bark");
     public static final ResourceKey<Item> SPRUCE_BARK = create("spruce_bark");
@@ -18,6 +19,8 @@ public class ModItemIDs {
     public static final ResourceKey<Item> PALE_OAK_BARK = create("pale_oak_bark");
     public static final ResourceKey<Item> CRIMSON_BARK = create("crimson_bark");
     public static final ResourceKey<Item> WARPED_BARK = create("warped_bark");
+
+    // ### WOODEN ARMOR START ###
     public static final ResourceKey<Item> WOOD_HELMET = create("wooden_helmet");
     public static final ResourceKey<Item> WOOD_CHESTPLATE = create("wooden_chestplate");
     public static final ResourceKey<Item> WOOD_LEGGINGS = create("wooden_leggings");

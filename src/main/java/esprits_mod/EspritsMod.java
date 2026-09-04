@@ -26,6 +26,7 @@ public class EspritsMod implements ModInitializer {
 		LOGGER.info("Esprits Mod has been initialised!");
 	}
 
+	// TODO Look into my code to find places where I forgot to integrate this
 	public static Identifier id(String path) {
 		return Identifier.fromNamespaceAndPath(MOD_ID, path);
 	}

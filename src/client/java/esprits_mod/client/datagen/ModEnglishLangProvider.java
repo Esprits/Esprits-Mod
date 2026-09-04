@@ -13,6 +13,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
+        // ### ITEMS START ###
         translationBuilder.add("item.esprits_mod.oak_bark", "Oak Bark");
         translationBuilder.add("item.esprits_mod.birch_bark", "Birch Bark");
         translationBuilder.add("item.esprits_mod.spruce_bark", "Spruce Bark");
@@ -29,5 +30,10 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("item.esprits_mod.wooden_chestplate", "Wooden Chestplate");
         translationBuilder.add("item.esprits_mod.wooden_leggings", "Wooden Leggings");
         translationBuilder.add("item.esprits_mod.wooden_boots", "Wooden Boots");
+
+        // ### TAGS START ###
+        translationBuilder.add("tag.item.esprits_mod.tree_bark", "Tree Bark");
+        translationBuilder.add("tag.item.esprits_mod.wooden_armor", "Wood Armor");
+        translationBuilder.add("tag.item.esprits_mod.repairs_wood_armor", "Repairs Wood Armor");
     }
 }

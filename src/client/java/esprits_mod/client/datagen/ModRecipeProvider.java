@@ -24,8 +24,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeProvider(registries, output) {
             @Override
             public void buildRecipes() {
-                HolderLookup.RegistryLookup<Item> itemLookup = registries.lookupOrThrow(Registries.ITEM);
+                // TODO Not sure why this is here tbh, but I'm keeping it in case I need it (I honestly haven't looked into it yet)
+                // HolderLookup.RegistryLookup<Item> itemLookup = registries.lookupOrThrow(Registries.ITEM);
 
+                // ### WOODEN ARMOR START ###
                 shaped(RecipeCategory.COMBAT, ModItems.WOOD_HELMET, 1)
                         .pattern("XXX")
                         .pattern("X X")
@@ -62,6 +64,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public String getName() {
-        return "EspritsModRecipeProvider";
+        // FIXME For some reason FabricRecipeProvider doesn't have getName() overridden?
+        return "Recipe Definitions";
     }
 }

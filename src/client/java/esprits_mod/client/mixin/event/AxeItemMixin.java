@@ -1,11 +1,8 @@
 package esprits_mod.client.mixin.event;
 
-import esprits_mod.EspritsMod;
 import esprits_mod.world.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.references.BlockIds;
-import net.minecraft.references.BlockItemIds;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.AxeItem;
@@ -39,11 +36,10 @@ public class AxeItemMixin {
         Level level = context.getLevel();
         BlockPos pos = context.getClickedPos();
         Direction face = context.getClickedFace();
-
         Block block = level.getBlockState(pos).getBlock();
         Item item;
 
-        // Check which log is broken and set the item to drop as its counterpart bark
+        // Check which log type is stripped and set the item as its appropriate bark
         if (block.equals(Blocks.OAK_LOG)) {
             item = ModItems.OAK_BARK;
         } else if (block.equals(Blocks.BIRCH_LOG)) {

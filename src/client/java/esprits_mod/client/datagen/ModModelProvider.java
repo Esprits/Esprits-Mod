@@ -19,6 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
+        // ### TREE BARK START ###
         itemModelGenerators.generateFlatItem(ModItems.OAK_BARK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.BIRCH_BARK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.SPRUCE_BARK, ModelTemplates.FLAT_ITEM);
@@ -30,6 +31,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.PALE_OAK_BARK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.CRIMSON_BARK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.WARPED_BARK, ModelTemplates.FLAT_ITEM);
+
+        // ### WOODEN ARMOR START ###
         itemModelGenerators.generateFlatItem(ModItems.WOOD_HELMET, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.WOOD_CHESTPLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.WOOD_LEGGINGS, ModelTemplates.FLAT_ITEM);
